@@ -1,6 +1,21 @@
-/*jslint node:true,vars:true */
-/*global mraa */
+/*jslint node:true,vars:true, unparam:true */
+/*jshint unused:true */
 
+
+/*
+The Touch Notifier Node.js sample application distributed within Intel® XDK IoT Edition under the IoT with Node.js Projects project creation option showcases how to read digital data from a Grover Starter Kit Plus – IoT Intel® Edition Touch Sensor, start a web server and communicate wirelessly using WebSockets.
+
+MRAA - Low Level Skeleton Library for Communication on GNU/Linux platforms
+Library in C/C++ to interface with Galileo & other Intel platforms, in a structured and sane API with port nanmes/numbering that match boards & with bindings to javascript & python.
+
+Steps for installing MRAA & UPM Library on Intel IoT Platform with IoTDevKit Linux* image
+Using a ssh client: 
+1. echo "src maa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/intel-iotdk.conf
+2. opkg update
+3. opkg upgrade
+
+Article: https://software.intel.com/en-us/html5/articles/iot-touch-notifier-nodejs-and-html5-samples
+*/
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //GROVE Kit Shield D6 --> GPIO6
@@ -8,11 +23,11 @@
 function startSensorWatch(socket) {
     'use strict';
     var touch_sensor_value = 0, last_t_sensor_value;
-    
+
     //Touch Sensor connected to D2 pin
     var digital_pin_D2 = new mraa.Gpio(2);
     digital_pin_D2.dir(mraa.DIR_IN);
-    
+
     //Buzzer connected to D6
     var digital_pin_D6 = new mraa.Gpio(6);
     digital_pin_D6.dir(mraa.DIR_OUT);
@@ -51,10 +66,10 @@ io.on('connection', function (socket) {
     console.log('a user connected');
     //Emits an event along with a message
     socket.emit('connected', 'Welcome');
-    
+
     //Start watching Sensors connected to Galileo board
     startSensorWatch(socket);
-    
+
     //Attach a 'disconnect' event handler to the socket
     socket.on('disconnect', function () {
         console.log('user disconnected');
