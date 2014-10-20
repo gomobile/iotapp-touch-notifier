@@ -17,33 +17,33 @@ Using a ssh client:
 Article: https://software.intel.com/en-us/html5/articles/iot-touch-notifier-nodejs-and-html5-samples
 */
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//MRAA Library was installed on the board directly through ssh session
+var mraa = require("mraa");
+
 //GROVE Kit Shield D6 --> GPIO6
 //GROVE Kit Shield D2 --> GPIO2
 function startSensorWatch(socket) {
     'use strict';
     var touch_sensor_value = 0, last_t_sensor_value;
 
-    //Touch Sensor connected to D2 pin
+    //Touch Sensor connected to D2 connector
     var digital_pin_D2 = new mraa.Gpio(2);
     digital_pin_D2.dir(mraa.DIR_IN);
 
-    //Buzzer connected to D6
+    //Buzzer connected to D6 connector
     var digital_pin_D6 = new mraa.Gpio(6);
     digital_pin_D6.dir(mraa.DIR_OUT);
-
-    console.log("Sample Reading Touch Sensor");
 
     digital_pin_D6.write(0);
 
     setInterval(function () {
         touch_sensor_value = digital_pin_D2.read();
         if (touch_sensor_value === 1 && last_t_sensor_value === 0) {
-            //console.log("Buzz ON!!!");
+            console.log("Buzz ON!!!");
             socket.emit('message', "present");
             digital_pin_D6.write(touch_sensor_value);
         } else if (touch_sensor_value === 0 && last_t_sensor_value === 1) {
-            //console.log("Buzz OFF!!!");
+            console.log("Buzz OFF!!!");
             //socket.emit('message', "absent");
             digital_pin_D6.write(touch_sensor_value);
         }
@@ -51,14 +51,16 @@ function startSensorWatch(socket) {
     }, 500);
 }
 
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-
-app.get('/', function (req, res) {
+//Create Socket.io server
+var http = require('http');
+var app = http.createServer(function (req, res) {
     'use strict';
-    res.send('<h1>Hello world from Intel Galileo</h1>');
-});
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('<h1>Hello world from Intel IoT platform!</h1>');
+}).listen(1337);
+var io = require('socket.io')(app);
+
+console.log("Sample Reading Touch Sensor");
 
 //Attach a 'connection' event handler to the server
 io.on('connection', function (socket) {
@@ -76,10 +78,3 @@ io.on('connection', function (socket) {
     });
 });
 
-http.listen(1337, function () {
-    'use strict';
-    console.log('listening on *:1337');
-});
-
-//MRAA Library was installed on the board directly through ssh session
-var mraa = require("mraa");
