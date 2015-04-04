@@ -1,17 +1,22 @@
 {
-	"reponame":"iotapp-touch-notifier",
-	"title":"Touch Notifier",
-	"tooltip":"A simple node.js application intended to showcase how to read digital data from a Grove Starter Kit Plus IoT Intel Edition Touch Sensor, start a web server and communicate wirelessly using WebSockets. The HTML5 companion app is visible under HTML5 Companion Hybrid Mobile or Web App > Samples and Demos > General (HTML5 + Cordova) panel.",
-	"description":"A simple node.js application intended to showcase how to read digital data from a Grove Starter Kit Plus IoT Intel Edition Touch Sensor, start a web server and communicate wirelessly using WebSockets. The HTML5 companion app is visible under HTML5 Companion Hybrid Mobile or Web App > Samples and Demos > General (HTML5 + Cordova) panel.",
-	"articleurl":"https://software.intel.com/en-us/xdk/docs/iot-touch-notifier-nodejs-and-html5-samples",
-    	"template":"true",
-    	"screenshotUrl":"",
-    	"iconUrl":"",
-	"highlights":[""],
-    	"keywords":[""],
-	"visible": "true",
-	"apppreview":"false",
-	"appname":"demo.touchnotifier",
-	"relname":"4.0.0",
-  	"projectTypeName": "com.intel.xdk.projecttype.iotapp"
+   "description" : "A simple node.js application intended to showcase how to read digital data from a Grove Starter Kit Plus IoT Intel Edition Touch Sensor, start a web server and communicate wirelessly using WebSockets. The HTML5 companion app is visible under HTML5 Companion Hybrid Mobile or Web App > Samples and Demos > General (HTML5 + Cordova) panel.",
+   "title" : "Touch Notifier",
+   "template" : "true",
+   "relName" : "4.0.0",
+   "appPreview" : false,
+   "tooltip" : "A simple node.js application intended to showcase how to read digital data from a Grove Starter Kit Plus IoT Intel Edition Touch Sensor, start a web server and communicate wirelessly using WebSockets. The HTML5 companion app is visible under HTML5 Companion Hybrid Mobile or Web App > Samples and Demos > General (HTML5 + Cordova) panel.",
+   "visible" : true,
+   "projectTypeName" : "com.intel.xdk.projecttype.iotapp",
+   "articleUrl" : "https://software.intel.com/en-us/xdk/docs/iot-touch-notifier-nodejs-and-html5-samples",
+   "mobile" : false,
+   "highlights" : [
+      ""
+   ],
+   "screenshotUrl" : "",
+   "appName" : "demo.touchnotifier",
+   "keywords" : [
+      ""
+   ],
+   "iconUrl" : "",
+   "repoName" : "iotapp-touch-notifier"
 }
