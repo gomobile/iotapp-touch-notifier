@@ -1,4 +1,5 @@
 {
+   "repoName" : "iotapp-touch-notifier",
    "description" : "A simple node.js application intended to showcase how to read digital data from a Grove Starter Kit Plus IoT Intel Edition Touch Sensor, start a web server and communicate wirelessly using WebSockets. The HTML5 companion app is visible under HTML5 Companion Hybrid Mobile or Web App > Samples and Demos > General (HTML5 + Cordova) panel.",
    "title" : "Touch Notifier",
    "template" : true,
@@ -15,6 +16,5 @@
    "keywords" : [
       ""
    ],
-   "iconUrl" : "",
-   "repoName" : "iotapp-touch-notifier"
+   "iconUrl" : ""
 }
