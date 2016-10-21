@@ -1,6 +1,6 @@
 {
-  "name": "TouchNotifier",
-  "description": "",
+  "name": "xdk-iot-touch-notifier",
+  "description": "Intel® XDK IoT Touch Notifier Node.js* App",
   "version": "0.0.0",
   "main": "main.js",
   "engines": {

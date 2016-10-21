@@ -1,22 +1,15 @@
 {
-   "repoName" : "iotapp-touch-notifier",
-   "description" : "A simple node.js application intended to showcase how to read digital data from a Grove Starter Kit Plus IoT Intel Edition Touch Sensor, start a web server and communicate wirelessly using WebSockets. The HTML5 companion app is visible under HTML5 Companion Hybrid Mobile or Web App > Samples and Demos > General (HTML5 + Cordova) panel.",
-   "title" : "Touch Notifier",
-   "template" : true,
-   "relName" : "4.0.0",
-   "tooltip" : "A simple node.js application intended to showcase how to read digital data from a Grove Starter Kit Plus IoT Intel Edition Touch Sensor, start a web server and communicate wirelessly using WebSockets. The HTML5 companion app is visible under HTML5 Companion Hybrid Mobile or Web App > Samples and Demos > General (HTML5 + Cordova) panel.",
-   "section" : "iot-templates",
-   "group" : "other",
-   "visible" : true,
-   "projectTypeName" : "com.intel.xdk.projecttype.iotapp",
-   "articleUrl" : "https://software.intel.com/en-us/xdk/docs/iot-touch-notifier-nodejs-and-html5-samples",
-   "highlights" : [
-      ""
-   ],
-   "screenshotUrl" : "",
-   "appName" : "demo.touchnotifier",
-   "keywords" : [
-      ""
-   ],
-   "iconUrl" : ""
+  "title" : "Touch Notifier",
+  "projectTypeName" : "com.intel.xdk.projecttype.iotapp",
+  "sample": false,
+  "template": true,
+  "visible" : true,
+  "sortWeight" : "0.0",
+  "repoName" : "iotapp-touch-notifier",
+  "tooltip" : "Read digital data from a touch sensor and start a web sockets communication server.",
+  "description" : "This sample IoT app illustrates how to read digital data using the touch sensor in a Grover Starter Kit Plus – IoT Intel® Edition. Also, this application will start a simple web server on the IoT board that can be used to communicate wirelessly with the board, using a WebSocket connection.",
+  "articleUrl" : "https://software.intel.com/en-us/xdk/docs/iot-touch-notifier-nodejs-and-html5-samples",
+  "keywords": ["touch sensor"],
+  "targets": ["edison","galileo"],
+  "runtimes": ["node"]
 }

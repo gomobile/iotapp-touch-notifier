@@ -1,23 +1,25 @@
-/*jslint node:true,vars:true, unparam:true */
-/*jshint unused:true */
-
-
 /*
-The Touch Notifier Node.js sample application distributed within Intel® XDK IoT Edition under the IoT with Node.js Projects project creation option showcases how to read digital data from a Grover Starter Kit Plus – IoT Intel® Edition Touch Sensor, start a web server and communicate wirelessly using WebSockets.
+ * Intel® XDK IoT Touch Notifier Node.js* App
+ *
+ * This sample IoT app illustrates how to read digital data using the touch sensor
+ * in a Grover Starter Kit Plus – IoT Intel® Edition. Also, this application will
+ * start a simple web server on the IoT board that can be used to communicate
+ * wirelessly with the board, using a WebSocket connection.
+ *
+ * This sample has only been tested on a Galileo and Edison board. It may run on
+ * other IoT Node.js platforms, but may require changes to the I/O initialization
+ * and configuration code.
+ *
+ * https://software.intel.com/en-us/xdk/docs/lp-xdk-iot
+ */
 
-MRAA - Low Level Skeleton Library for Communication on GNU/Linux platforms
-Library in C/C++ to interface with Galileo & other Intel platforms, in a structured and sane API with port nanmes/numbering that match boards & with bindings to javascript & python.
 
-Steps for installing MRAA & UPM Library on Intel IoT Platform with IoTDevKit Linux* image
-Using a ssh client: 
-1. echo "src maa-upm http://iotdk.intel.com/repos/1.1/intelgalactic" > /etc/opkg/intel-iotdk.conf
-2. opkg update
-3. opkg upgrade
+// keep these lines (below) for proper jshinting and jslinting
+/*jslint node:true, vars:true, bitwise:true */
+/*jshint unused:true, undef:true */
+// see http://www.jslint.com/help.html and http://jshint.com/docs
 
-Article: https://software.intel.com/en-us/html5/articles/iot-touch-notifier-nodejs-and-html5-samples
-*/
 
-//MRAA Library was installed on the board directly through ssh session
 var mraa = require("mraa");
 
 //GROVE Kit Shield D6 --> GPIO6
@@ -51,6 +53,7 @@ function startSensorWatch(socket) {
     }, 500);
 }
 
+
 //Create Socket.io server
 var http = require('http');
 var app = http.createServer(function (req, res) {
@@ -77,4 +80,3 @@ io.on('connection', function (socket) {
         console.log('user disconnected');
     });
 });
-
