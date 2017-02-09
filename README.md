@@ -13,24 +13,35 @@ Intel XDK, please start with
 
 App Overview
 ------------
-This sample IoT app illustrates how to read digital data using the touch sensor
-in a Grover Starter Kit Plus – IoT Intel® Edition. Also, this application will
-start a simple web server on the IoT board that can be used to communicate
-wirelessly with the board, using a WebSocket connection.
+Demonstrates reading digital data from the touch sensor in a
+[Grover Starter Kit Plus](https://www.seeedstudio.com/
+Grove-Starter-Kit-Plus-IoT-Edison-p-2634.html) (or equivalent) I/O kit.
+The app starts a web server on the IoT device that can then be used for
+communication via a [WebSocket](https://www.websocket.org/) interface.
 
-This sample has been tested on an [Intel® Galileo Board](http://intel.com/galileo)
-and an [Intel® Edison Development Platform](http://intel.com/edison). It may run on
-other IoT [Node.js](http://nodejs.org) development platforms, but may require
-changes to the I/O initialization and configuration code to work on other platforms.
+This IoT app works in conjunction with a mobile companion app also named
+"Touch Notifier." The corresponding mobile app project can be found in the
+"Samples and Demos" section of the "HTML5 Companion App" section of the "Start
+a New Project" page (located on the Projects tab). See that app for additional
+details.
 
-Important Sample App Files
---------------------------
+Important App Files
+-------------------
 * main.js
 * package.json
 
-Important Sample Project Files
-------------------------------
+Important Project Files
+-----------------------
 * README.md
 * LICENSE.md
-* project-name.xdk
-* project-name.xdke
+* <project-name>.xdk
+
+Tested IoT Node.js Platforms
+----------------------------
+* [Intel® Galileo Board](http://intel.com/galileo)
+* [Intel® Edison Development Platform](http://intel.com/edison)
+
+This sample can run on other IoT [Node.js](http://nodejs.org) development
+platforms, that include the appropriate sensor hardware, but may require
+changes to the I/O initialization and configuration code in order to work on
+those other platforms.

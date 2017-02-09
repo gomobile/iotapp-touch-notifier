@@ -1,15 +1,15 @@
 {
   "title" : "Touch Notifier",
   "projectTypeName" : "com.intel.xdk.projecttype.iotapp",
-  "sample": false,
-  "template": true,
+  "sample" : false,
+  "template" : true,
   "visible" : true,
   "sortWeight" : "0.0",
   "repoName" : "iotapp-touch-notifier",
   "tooltip" : "Read data from a touch sensor and emit sound from the buzzer. Works with an IoT mobile companion app named \"Touch Notifier.\"",
   "description" : "A Node.js IoT app that illustrates how to read a touch sensor that triggers activating a buzzer, on select Intel IoT development boards. This app will also start a simple web server (on the IoT board) that can be used to communicate via a WebSocket connection. The IoT mobile companion app is named \"Touch Notifier\" and is a mobile app project that can be found in the \"Samples and Demos\" section of the \"Companion App\" part of the \"Start a New Project\" page (from the Projects tab)",
-  "articleUrl" : "https://software.intel.com/en-us/xdk/docs/iot-touch-notifier-nodejs-and-html5-samples",
-  "keywords": ["touch sensor","buzzer","WebSockets"],
-  "targets": ["edison","galileo"],
-  "runtimes": ["node"]
+  "articleUrl" : "https://software.intel.com/en-us/xdk/docs/using-templates-nodejs-iot",
+  "keywords" : ["touch sensor","buzzer","WebSockets"],
+  "targets" : ["edison","galileo"],
+  "runtimes" : ["node"]
 }
